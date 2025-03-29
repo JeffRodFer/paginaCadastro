@@ -28,7 +28,7 @@ function checkInputEmail(){
   const emailValue = email.value;
 
   if (emailValue === ""){
-    errorInput(email, "Email obrigatório!")
+    errorInput(email, "Please enter a email!")
   }else{
     const formItem = email.parentElement;
     formItem.className = "form-content"
@@ -38,9 +38,9 @@ function checkInputPassword () {
   const passwordValue = password.value;
 
   if (passwordValue === ""){
-    errorInput(password, "Senha obrigatória!")
+    errorInput(password, "Please enter a password!")
   }else if(passwordValue.length < 8) {
-      errorInput(password, "Senha maior que 8 caracteres!")
+      errorInput(password, "Password must be at 8 characters long!")
     }else{
     const formItem = password.parentElement;
     formItem.className = "form-content"
@@ -52,9 +52,9 @@ function checkInputPasswordConfirmation () {
   const passwordConfirmationValue = passwordConfirmation.value;
 
   if (passwordConfirmationValue === ""){
-    errorInput(passwordConfirmation, "Confirme a senha!")
+    errorInput(passwordConfirmation, "Please enter a password confirmation!")
   }else if(passwordConfirmationValue !== passwordValue) {
-    errorInput(passwordConfirmation, "Senha diferente!")
+    errorInput(passwordConfirmation, "Password confirmation does not match!")
   }else{
     const formItem = passwordConfirmation.parentElement;
     formItem.className = "form-content"

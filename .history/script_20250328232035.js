@@ -54,7 +54,7 @@ function checkInputPasswordConfirmation () {
   if (passwordConfirmationValue === ""){
     errorInput(passwordConfirmation, "Confirme a senha!")
   }else if(passwordConfirmationValue !== passwordValue) {
-    errorInput(passwordConfirmation, "Senha diferente!")
+    errorInput(passwordConfirmation, "!")
   }else{
     const formItem = passwordConfirmation.parentElement;
     formItem.className = "form-content"
