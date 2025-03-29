@@ -10,7 +10,6 @@ form.addEventListener('submit', (event) => {
   checkInputUsername();
   checkInputEmail();
   checkInputPassword();
-  checkInputPasswordConfirmation();
 })
 
 function checkInputUsername() {
@@ -51,14 +50,7 @@ function checkInputPasswordConfirmation () {
   const passwordValue = password.value;
   const passwordConfirmationValue = passwordConfirmation.value;
 
-  if (passwordConfirmationValue === ""){
-    errorInput(passwordConfirmation, "Please enter a password confirmation!")
-  }else if(passwordConfirmationValue !== passwordValue) {
-    errorInput(passwordConfirmation, "Password confirmation does not match!")
-  }else{
-    const formItem = passwordConfirmation.parentElement;
-    formItem.className = "form-content"
-  }
+  if 
 }
 function errorInput(input, message) {
   const formItem = input.parentElement;

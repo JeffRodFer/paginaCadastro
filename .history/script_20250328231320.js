@@ -10,7 +10,7 @@ form.addEventListener('submit', (event) => {
   checkInputUsername();
   checkInputEmail();
   checkInputPassword();
-  checkInputPasswordConfirmation();
+  
 })
 
 function checkInputUsername() {

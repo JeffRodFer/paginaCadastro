@@ -10,7 +10,6 @@ form.addEventListener('submit', (event) => {
   checkInputUsername();
   checkInputEmail();
   checkInputPassword();
-  checkInputPasswordConfirmation();
 })
 
 function checkInputUsername() {
@@ -47,16 +46,15 @@ function checkInputPassword () {
   }
 }
 
-function checkInputPasswordConfirmation () {
+function checkInputPasswordC () {
   const passwordValue = password.value;
-  const passwordConfirmationValue = passwordConfirmation.value;
 
-  if (passwordConfirmationValue === ""){
-    errorInput(passwordConfirmation, "Please enter a password confirmation!")
-  }else if(passwordConfirmationValue !== passwordValue) {
-    errorInput(passwordConfirmation, "Password confirmation does not match!")
-  }else{
-    const formItem = passwordConfirmation.parentElement;
+  if (passwordValue === ""){
+    errorInput(password, "Please enter a password!")
+  }else if(passwordValue.length < 8) {
+      errorInput(password, "Password must be at 8 characters long!")
+    }else{
+    const formItem = password.parentElement;
     formItem.className = "form-content"
   }
 }
