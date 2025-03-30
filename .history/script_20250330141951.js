@@ -7,16 +7,13 @@ const passwordConfirmation = document.getElementById('password-confirmation');
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
-checkForm();
-
-})
-
-email.addEventListener("blur", () => {
-  checkInputEmail();
-})
-
-username.addEventListener("blur", () => {
   checkInputUsername();
+  checkInputEmail();
+  checkInputPassword();
+  checkInputPasswordConfirmation();
+
+
+  alert("FORMULÁRIO ENVIADO COM SUCESSO!")
 })
 
 function checkInputUsername() {
@@ -67,23 +64,7 @@ function checkInputPasswordConfirmation () {
   }
 }
 
-function checkForm(){
-  checkInputUsername();
-  checkInputEmail();
-  checkInputPassword();
-  checkInputPasswordConfirmation();
-
-  const formItens = form.querySelectorAll(".form-content")
-  
-  const isValid = [...formItens].every((item) => {
-    return item.className === "form-content"
-  });
-
-  if (isValid) {
-    alert("CADASTRADO ENVIADO COM SUCESSO!")
-}
-
-}
+function check
 
 function errorInput(input, message) {
   const formItem = input.parentElement;

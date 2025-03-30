@@ -11,13 +11,9 @@ checkForm();
 
 })
 
-email.addEventListener("blur", () => {
+function checkInputEmail(): void . {
   checkInputEmail();
-})
-
-username.addEventListener("blur", () => {
-  checkInputUsername();
-})
+}
 
 function checkInputUsername() {
   const usernameValue = username.value;

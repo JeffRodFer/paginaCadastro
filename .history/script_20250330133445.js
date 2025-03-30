@@ -7,16 +7,10 @@ const passwordConfirmation = document.getElementById('password-confirmation');
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
-checkForm();
-
-})
-
-email.addEventListener("blur", () => {
-  checkInputEmail();
-})
-
-username.addEventListener("blur", () => {
   checkInputUsername();
+  checkInputEmail();
+  checkInputPassword();
+  checkInputPasswordConfirmation();
 })
 
 function checkInputUsername() {
@@ -46,7 +40,7 @@ function checkInputPassword () {
   if (passwordValue === ""){
     errorInput(password, "Senha obrigatória!")
   }else if(passwordValue.length < 8) {
-      errorInput(password, "Deve ter mais que 8 caracteres!")
+      errorInput(password, "Deve er mais que 8 caracteres!")
     }else{
     const formItem = password.parentElement;
     formItem.className = "form-content"
@@ -66,25 +60,6 @@ function checkInputPasswordConfirmation () {
     formItem.className = "form-content"
   }
 }
-
-function checkForm(){
-  checkInputUsername();
-  checkInputEmail();
-  checkInputPassword();
-  checkInputPasswordConfirmation();
-
-  const formItens = form.querySelectorAll(".form-content")
-  
-  const isValid = [...formItens].every((item) => {
-    return item.className === "form-content"
-  });
-
-  if (isValid) {
-    alert("CADASTRADO ENVIADO COM SUCESSO!")
-}
-
-}
-
 function errorInput(input, message) {
   const formItem = input.parentElement;
   const textMessage = formItem.querySelector("a")

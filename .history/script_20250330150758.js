@@ -9,14 +9,7 @@ form.addEventListener('submit', (event) => {
 
 checkForm();
 
-})
-
-email.addEventListener("blur", () => {
-  checkInputEmail();
-})
-
-username.addEventListener("blur", () => {
-  checkInputUsername();
+  alert("FORMULÁRIO ENVIADO COM SUCESSO!")
 })
 
 function checkInputUsername() {
@@ -78,11 +71,7 @@ function checkForm(){
   const isValid = [...formItens].every((item) => {
     return item.className === "form-content"
   });
-
-  if (isValid) {
-    alert("CADASTRADO ENVIADO COM SUCESSO!")
-}
-
+  
 }
 
 function errorInput(input, message) {

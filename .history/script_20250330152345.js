@@ -12,11 +12,7 @@ checkForm();
 })
 
 email.addEventListener("blur", () => {
-  checkInputEmail();
-})
-
-username.addEventListener("blur", () => {
-  checkInputUsername();
+  che
 })
 
 function checkInputUsername() {

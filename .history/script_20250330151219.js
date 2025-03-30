@@ -11,14 +11,6 @@ checkForm();
 
 })
 
-email.addEventListener("blur", () => {
-  checkInputEmail();
-})
-
-username.addEventListener("blur", () => {
-  checkInputUsername();
-})
-
 function checkInputUsername() {
   const usernameValue = username.value;
 
@@ -80,7 +72,7 @@ function checkForm(){
   });
 
   if (isValid) {
-    alert("CADASTRADO ENVIADO COM SUCESSO!")
+    alert("CADASTRADO ENVIADO COM SUCESSO!")  
 }
 
 }

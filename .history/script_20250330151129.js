@@ -9,14 +9,7 @@ form.addEventListener('submit', (event) => {
 
 checkForm();
 
-})
-
-email.addEventListener("blur", () => {
-  checkInputEmail();
-})
-
-username.addEventListener("blur", () => {
-  checkInputUsername();
+  alert("FORMULÁRIO ENVIADO COM SUCESSO!")
 })
 
 function checkInputUsername() {
@@ -80,9 +73,7 @@ function checkForm(){
   });
 
   if (isValid) {
-    alert("CADASTRADO ENVIADO COM SUCESSO!")
-}
-
+    alert("CADASTRADO ENVIADO COM SUCESSO!")  
 }
 
 function errorInput(input, message) {
