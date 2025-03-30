@@ -16,12 +16,12 @@ email.addEventListener("blur", () => {
   checkInputEmail();
 })
 
-phone.addEventListener("blur", () => {
-  checkInputPhone();
-})
-
 username.addEventListener("blur", () => {
   checkInputUsername();
+})
+
+phone.addEventListener("blur", () => {
+  checkInputPhone();
 })
 
 function checkInputUsername() {
@@ -32,7 +32,6 @@ if (usernameValue === ""){
 }else{
   const formItem = username.parentElement;
   formItem.className = "form-content"
-}
 }
 
 function checkInputPhone() {
@@ -85,7 +84,6 @@ function checkInputPasswordConfirmation () {
 
 function checkForm(){
   checkInputUsername();
-  checkInputPhone();
   checkInputEmail();
   checkInputPassword();
   checkInputPasswordConfirmation();

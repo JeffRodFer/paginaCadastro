@@ -16,12 +16,12 @@ email.addEventListener("blur", () => {
   checkInputEmail();
 })
 
-phone.addEventListener("blur", () => {
-  checkInputPhone();
-})
-
 username.addEventListener("blur", () => {
   checkInputUsername();
+})
+
+phone.addEventListener("blur", () => {
+  checkInputPhone();
 })
 
 function checkInputUsername() {
@@ -33,15 +33,14 @@ if (usernameValue === ""){
   const formItem = username.parentElement;
   formItem.className = "form-content"
 }
-}
 
 function checkInputPhone() {
   const phoneValue = phone.value;
 
 if (phoneValue === ""){
-  errorInput(phone, "Telefone obrigatório!")
+  errorInput(p, "Telefone obrigatório!")
 }else{
-  const formItem = phone.parentElement;
+  const formItem = username.parentElement;
   formItem.className = "form-content"
 }
 
@@ -85,7 +84,6 @@ function checkInputPasswordConfirmation () {
 
 function checkForm(){
   checkInputUsername();
-  checkInputPhone();
   checkInputEmail();
   checkInputPassword();
   checkInputPasswordConfirmation();

@@ -33,7 +33,7 @@ if (usernameValue === ""){
   const formItem = username.parentElement;
   formItem.className = "form-content"
 }
-}
+
 
 function checkInputPhone() {
   const phoneValue = phone.value;
