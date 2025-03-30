@@ -39,7 +39,7 @@ function checkInputPhone() {
   const phoneValue = phone.value;
 
 if (phoneValue === ""){
-  errorInput(phone, "Telefone obrigatorio!")
+  errorInput(phone, "Telefone obrigatrio!")
 }else{
   const formItem = phone.parentElement;
   formItem.className = "form-content"
