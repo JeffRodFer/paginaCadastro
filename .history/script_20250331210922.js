@@ -97,7 +97,7 @@ function checkForm(){
   });
 
   if (isValid) {
-    alert("Registration sent sucessfully!")
+    alert("Registration sent su!")
 }
 
 }

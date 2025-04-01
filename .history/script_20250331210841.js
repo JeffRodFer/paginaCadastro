@@ -76,7 +76,7 @@ function checkInputPasswordConfirmation () {
   if (passwordConfirmationValue === ""){
     errorInput(passwordConfirmation, "Confirm password!")
   }else if(passwordConfirmationValue !== passwordValue) {
-    errorInput(passwordConfirmation, "Password is different!")
+    errorInput(passwordConfirmation, "Password is diferent!")
   }else{
     const formItem = passwordConfirmation.parentElement;
     formItem.className = "form-content"
@@ -97,7 +97,7 @@ function checkForm(){
   });
 
   if (isValid) {
-    alert("Registration sent sucessfully!")
+    alert("CADASTRADO ENVIADO COM SUCESSO!")
 }
 
 }

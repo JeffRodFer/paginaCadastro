@@ -60,9 +60,9 @@ function checkInputPassword () {
   const passwordValue = password.value;
 
   if (passwordValue === ""){
-    errorInput(password, "Password required!")
+    errorInput(password, "Senha obrigatória!")
   }else if(passwordValue.length < 8) {
-      errorInput(password, "Most have more than 8 chacacters!")
+      errorInput(password, "Deve ter mais que 8 caracteres!")
     }else{
     const formItem = password.parentElement;
     formItem.className = "form-content"
@@ -74,9 +74,9 @@ function checkInputPasswordConfirmation () {
   const passwordConfirmationValue = passwordConfirmation.value;
 
   if (passwordConfirmationValue === ""){
-    errorInput(passwordConfirmation, "Confirm password!")
+    errorInput(passwordConfirmation, "Confirme a senha!")
   }else if(passwordConfirmationValue !== passwordValue) {
-    errorInput(passwordConfirmation, "Password is different!")
+    errorInput(passwordConfirmation, "A senha está diferente!")
   }else{
     const formItem = passwordConfirmation.parentElement;
     formItem.className = "form-content"
@@ -97,7 +97,7 @@ function checkForm(){
   });
 
   if (isValid) {
-    alert("Registration sent sucessfully!")
+    alert("CADASTRADO ENVIADO COM SUCESSO!")
 }
 
 }
