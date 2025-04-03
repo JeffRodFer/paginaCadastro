@@ -111,8 +111,4 @@ function errorInput(input, message) {
 
   formItem.className = "form-content error"
 }
-<script>
-  document.getElementById("resetPage").addEventListener("click", function() {
-    location.reload()
-  });
-</script>
+

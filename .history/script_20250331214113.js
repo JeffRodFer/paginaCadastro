@@ -113,6 +113,6 @@ function errorInput(input, message) {
 }
 <script>
   document.getElementById("resetPage").addEventListener("click", function() {
-    location.reload()
+    location.reload();
   });
 </script>
